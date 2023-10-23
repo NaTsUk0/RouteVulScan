@@ -24,7 +24,7 @@ jobs:
           cd gradle/wrapper
           wget https://raw.githubusercontent.com/DanySK/gradle-wrapper/master/gradle/wrapper/gradle-wrapper.jar
           wget https://raw.githubusercontent.com/DanySK/gradle-wrapper/master/gradle/wrapper/gradle-wrapper.properties
-          cd ../
+          cd ../../
           chmod +x gradlew
       - name: Execute Gradle build
         run: ./gradlew build
