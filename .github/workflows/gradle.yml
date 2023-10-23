@@ -26,10 +26,8 @@ jobs:
           wget https://raw.githubusercontent.com/DanySK/gradle-wrapper/master/gradle/wrapper/gradle-wrapper.properties
           cd ../../
           chmod +x gradlew
-      - name: Execute Gradle build
-        run: ./gradlew build
       - name: Creating the jar file
-        run: ./gradlew jar
+        run: ./gradlew build fatjar
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
