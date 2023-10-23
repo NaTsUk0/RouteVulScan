@@ -22,8 +22,8 @@ jobs:
           wget https://raw.githubusercontent.com/DanySK/gradle-wrapper/master/gradlew
           mkdir -p gradle/wrapper
           cd gradle/wrapper
-          wget https://raw.githubusercontent.com/DanySK/gradle-wrapper/master/gradlew/gradle/wrapper/gradle-wrapper.jar
-          wget https://raw.githubusercontent.com/DanySK/gradle-wrapper/master/gradlew/gradle/wrapper/gradle-wrapper.properties
+          wget https://raw.githubusercontent.com/DanySK/gradle-wrapper/master/gradle/wrapper/gradle-wrapper.jar
+          wget https://raw.githubusercontent.com/DanySK/gradle-wrapper/master/gradle/wrapper/gradle-wrapper.properties
           chmod +x gradlew
       - name: Execute Gradle build
         run: ./gradlew build
