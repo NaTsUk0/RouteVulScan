@@ -18,11 +18,13 @@ jobs:
           java-version: '19'
           cache: 'gradle'
       - name: Setup Gradle
-        uses: gradle/gradle-build-action@v2
+        run: wget https://raw.githubusercontent.com/DanySK/gradle-wrapper/master/gradlew
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
       - name: Execute Gradle build
-        run: gradlew build
+        run: ./gradlew build
       - name: Creating the jar file
-        run: gradlew jar
+        run: ./gradlew jar
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
