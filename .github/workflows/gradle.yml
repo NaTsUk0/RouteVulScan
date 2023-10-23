@@ -18,7 +18,13 @@ jobs:
           java-version: '19'
           cache: 'gradle'
       - name: Setup Gradle
-        uses: TozyF/setup-gradle-action@v1
+        run: | 
+          wget https://raw.githubusercontent.com/DanySK/gradle-wrapper/master/gradlew
+          mkdir gradle/wrapper
+          cd gradle/wrapper
+          wget https://raw.githubusercontent.com/DanySK/gradle-wrapper/master/gradlew/gradle/wrapper/gradle-wrapper.jar
+          wget https://raw.githubusercontent.com/DanySK/gradle-wrapper/master/gradlew/gradle/wrapper/gradle-wrapper.properties
+          chmod +x gradlew
       - name: Execute Gradle build
         run: ./gradlew build
       - name: Creating the jar file
