@@ -21,7 +21,7 @@ jobs:
         run: | 
           wget https://raw.githubusercontent.com/DanySK/gradle-wrapper/master/gradlew
           chmod +x gradlew
-          ./gradlew init
+          ./gradlew wrapper
       - name: Execute Gradle build
         run: ./gradlew build
       - name: Creating the jar file
